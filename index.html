@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VoidFall Dungeons - Official Site</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(circle at center, #140022 0%, #05000a 80%);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 52px;
+            color: #d14dff;
+            text-shadow: 0 0 40px #b84dff;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #c77dff;
+            margin-top: 10px;
+        }
+
+        
+            .section-title{
+                color:#000000;
+                font-size:32px;
+                font-weight:bold;
+                animation:betaGlow 2s infinite alternate;
+}   
+                        
+
+        .members {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 25px;
+            border-radius: 25px;
+            background: #10001c;
+            box-shadow: 0 0 25px rgba(209, 77, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 45px rgba(209, 77, 255, 0.9);
+        }
+
+        .name {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .role {
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: linear-gradient(to right, #f5d76e, rgb(179, 87, 182), #ff4dd2);
+            font-weight: bold;
+            color: rgb(88, 35, 87);
+            margin-top:10px;
+
+        }
+
+        .features {
+             text-shadow:0 0 10px #c9109e;
+        }
+
+
+         #particles{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            z-index:-1;
+            pointer-events:none;
+        } 
+
+    .playbtn{
+                display:inline-block;
+                padding:15px 40px;
+                border-radius:40px;
+                background:linear-gradient(90deg,#ffd86b,#ff4dd2);
+                color:black;
+                font-weight:bold;
+                text-decoration:none;
+                box-shadow:0 0 20px #ff4dd2;
+                margin-top:15px;
+            }
+
+    .disabled{
+            opacity:0.6;
+            pointer-events:none;
+            }
+            .beta{
+                color:#fdd1fd;
+                text-shadow:0 0 10px #feb5f8;
+                animation:betaGlow 2s infinite alternate;
+                }
+
+                @keyframes betaGlow{
+                from{
+                text-shadow:0 0 5px #f500e1;
+                }
+                to{
+                text-shadow:0 0 20px #ff00ea;
+                }
+                }     
+                
+                
+                @font-face{
+font-family:"Minecraft";
+src:url("minecraft-dungeons.otf") format("truetype");
+
+}
+
+body{
+font-family:"Minecraft", sans-serif;
+letter-spacing:2px;
+margin-top:5px;
+}
+
+.update{
+
+color:#ff4dd2;
+font-size:28px;
+text-shadow:0 0 8px #9e1693;
+animation:updatePulse 2s infinite alternate;
+}
+
+@keyframes updatePulse{
+from{ text-shadow:0 0 10px #ff4dd2; }
+to{ text-shadow:0 0 20px #ff4dd2; }
+}
+
+.devlog{
+display:inline-block;
+margin-top:40px;
+background:linear-gradient(90deg,#ff6aa8,#8a2cff,#4d6bff);
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 6px rgba(255,70,255,0.4);
+}
+
+
+.timeline{
+position:relative;
+width:600px;
+margin:80px auto;
+}
+
+
+.timeline::before{
+content:"";
+position:absolute;
+
+left:50%;
+top:0;
+bottom:0;
+
+width:4px;
+
+background:#612351;
+box-shadow:0 0 12px #ff4dd2;
+
+transform:translateX(-50%);
+}
+
+
+.entry{
+position:relative;
+text-align:center;
+padding:70px 0;
+}
+
+
+
+
+.entry::after{
+content:"";
+position:absolute;
+
+left:50%;
+top:0;
+
+width:16px;
+height:16px;
+
+background:#860b68;
+border-radius:50%;
+
+box-shadow:0 0 12px #ff4dd2;
+
+transform:translateX(-50%);
+}
+
+
+.dot{
+width:16px;
+height:16px;
+
+background:#ff4dd2;
+border-radius:50%;
+
+margin:20px auto;
+
+box-shadow:0 0 12px #ff4dd2;
+}
+    </style>
+</head>
+<body>
+    
+    <canvas id="particles"></canvas>
+
+    <h1>VoidFall Dungeons</h1>
+    <h2>Made for status and other stuff :3</h2>
+    <p class="beta">Still in beta!</p>
+    
+
+    <div class="section-title">Devs/Testers</div>
+
+    <div class="members">
+
+        <div class="card">
+            <div class="name">Axo04YT</div>
+            <div class="role">OWNER / DEV</div>
+            
+            <div class="role">(MCD Reborn)</div>
+        </div>
+
+        <div class="card">
+            <div class="name">ChatGPT</div>
+            <div class="role">Helper (Website Code)</div>
+            <div class="role">(Cuz i cant code lmfao)</div>
+        </div>
+
+        <div class="card">
+            <div class="name">More Soon..</div>
+            <div class="role">???</div>
+            <div class="role">(no devs/testers yet :c)</div>
+        </div>
+
+        
+
+
+        <div class="features">
+    <h2>Features:</h2>
+
+            <ul>
+            <li>⚔ Custom Weapons</li>
+            <li>📦 Custom Chests</li>
+            <li>🎒 Inventory System</li>
+            <li>🗺 Mission Selection</li>
+            <li>✨ Custom Rarities</li>
+            <li>⭐ Seasonal Events</li>
+            <li>🔥 And so much more!</li>
+            </ul>
+            </div>
+
+    
+
+    </div>
+
+
+
+
+    <h2>Development Log</h2>
+
+    <div class="timeline">
+
+<div class="entry">
+<h2 class="update">UPDATE 0.1</h2>
+<p class="devlog">Started building weapons and chest system.</p>
+</div>
+
+<div class="entry">
+<h2 class="update">UPDATE 0.2</h2>
+<p class="devlog">Added inventory UI and weapon stats.</p>
+</div>
+
+<div class="entry">
+<h2 class="update">UPDATE 0.3</h2>
+<p class="devlog">Started working on artifact animations.</p>
+</div>
+
+<div class="entry">
+    <h2 class="update">WEBSITE UPDATE 1.3</h2>
+
+    <div class="dot"></div>
+
+    <p class="devlog">Added timeline.</p>
+</div>
+
+
+
+<div class="entry">
+    <h2 class="update">WEBSITE UPDATE 1.4</h2>
+
+    <div class="dot"></div>
+
+    <p class="devlog">Now an actual website! :3</p>
+</div>
+
+
+
+
+
+<div class="entry">
+    <h2 class="update">Game Update 0.4</h2>
+
+    <div class="dot"></div>
+
+    <p class="devlog">Added Corrupted Beacon to artifact testing.</p>
+</div>
+
+
+
+<div class="entry">
+    <h2 class="update">Game Update 0.5</h2>
+
+    <div class="dot"></div>
+
+    <p class="devlog">finished corrupted beacon beam and artifact. still have not added it yet to the real game..</p>
+</div>
+
+
+</div>
+            <script>
+
+    const canvas = document.getElementById("particles")
+    const ctx = canvas.getContext("2d")
+
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    let particles = []
+
+    for(let i=0;i<80;i++){
+    particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    vx:(Math.random()-0.5)*0.3,
+    vy:(Math.random()-0.5)*0.3,
+    size:Math.random()*3+1
+    })
+    }
+
+    function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+
+    particles.forEach(p=>{
+
+    p.x+=p.vx
+    p.y+=p.vy
+
+    if(p.x<0)p.x=canvas.width
+    if(p.x>canvas.width)p.x=0
+    if(p.y<0)p.y=canvas.height
+    if(p.y>canvas.height)p.y=0
+
+    ctx.beginPath()
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2)
+    ctx.fillStyle="rgba(255,70,255,0.7)"
+    ctx.shadowBlur=20
+    ctx.shadowColor="#ff4df0"
+    ctx.fill()
+
+    })
+
+    requestAnimationFrame(animate)
+
+    }
+
+    animate()
+
+    </script>
+
+
+</body>
+</html>
